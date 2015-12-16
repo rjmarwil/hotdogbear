@@ -83,7 +83,7 @@
 
 
   var mousex = w/2, mousey = h/2;
-  PIXI.loader.add('beardisplacement', 'mesmercatdisplacement.jpg').load(function (loader, resources) {
+  PIXI.loader.add('beardisplacement', 'backbear.png').load(function (loader, resources) {
     beard = new PIXI.Sprite(resources.beardisplacement.texture);
     bearf = new PIXI.filters.DisplacementFilter(beard, 0);
     bear.filters = [bearf];
