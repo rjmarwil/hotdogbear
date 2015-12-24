@@ -167,9 +167,9 @@
     }
 
     for (i=0; i<nans.length; i++) {
-      nans[i].position.x = ((d/(10+i) + i*500)) % (w + 600) - 200;
+      nans[i].position.x = ((d/(14+i) + i*600)) % (w + 700) - 300;
       nans[i].position.y = 75 * Math.sin(i + d / 4000) + 100;
-      nans[i].rotation = Math.sign(i-1) * d / (2000 + 150 * i);
+      nans[i].rotation = Math.sign(i-1.1) * d / (2100 + 200 * i);
     }
 
     bearf.scale.x = (window.innerWidth/2 - mousex) / 80 + 6 * Math.sin(d/1000);
