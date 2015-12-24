@@ -82,18 +82,18 @@
   });
 
 
-  // var mousex = w/2, mousey = h/2;
-  // PIXI.loader.add('beardisplacement', 'panda.png').load(function (loader, resources) {
-  //   beard = new PIXI.Sprite(resources.beardisplacement.texture);
-  //   bearf = new PIXI.filters.DisplacementFilter(beard, 0);
-  //   bear.filters = [bearf];
-  //   bear.addChild(beard)
-  //
-  //   window.onmousemove = function(e) {
-  //     mousex = e.clientX;
-  //     mousey = e.clientY;
-  //   };
-  // });
+  var mousex = w/2, mousey = h/2;
+  PIXI.loader.add('beardisplacement', 'anda.png').load(function (loader, resources) {
+    beard = new PIXI.Sprite(resources.beardisplacement.texture);
+    bearf = new PIXI.filters.DisplacementFilter(beard, 0);
+    bear.filters = [bearf];
+    bear.addChild(beard)
+
+    window.onmousemove = function(e) {
+      mousex = e.clientX;
+      mousey = e.clientY;
+    };
+  });
 
 
   var f3;
