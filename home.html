@@ -70,6 +70,27 @@
     }
   });
 
+  var nans = [];
+  PIXI.loader.add('nan', 'nan_jake.png').load(function (loader, resources) {
+    var shadow = new PIXI.filters.DropShadowFilter();
+    shadow.distance = 0;
+    shadow.blur = 20;
+
+    for (i=0; i<5; i++) {
+      var p = new PIXI.Sprite(resources.nan.texture);
+      p.position.y = Math.random() * 400;
+      p.pivot.x = 480/2;
+      p.pivot.y = 263/2;
+      p.scale.x = 0.5;
+      p.scale.y = 0.5;
+
+      p.filters = [shadow];
+
+      nans[i] = p;
+      foreground.addChild(p);
+    }
+  });
+
   PIXI.loader.add('bear', 'panda.png').load(function (loader, resources) {
     bear = new PIXI.Sprite(resources.bear.texture);
     bear.pivot.x = 250;
