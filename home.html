@@ -22,7 +22,7 @@
   </style>
 </head>
 <body cz-shortcut-listen="true">
-  <iframe src="https://www.youtube.com/embed/39zKhsT5naI?autoplay=1&loop=1&v=39zKhsT5naI"></iframe>
+  <iframe src="https://www.youtube.com/embed/LlvUepMa31o?autoplay=1&loop=1&v=LlvUepMa31o"></iframe>
   <script>
 
   w = 1024, h = 768;
@@ -38,7 +38,7 @@
 
   var bear, bg, d, f;
 
-  PIXI.loader.add('bg', 'chinese.jpg').load(function (loader, resources) {
+  PIXI.loader.add('bg', 'rsz_chinese.jpg').load(function (loader, resources) {
     bg = new PIXI.Sprite(resources.bg.texture);
     bg.position.x = w / 2;
     bg.position.y = h / 2;
@@ -82,18 +82,18 @@
   });
 
 
-  var mousex = w/2, mousey = h/2;
-  PIXI.loader.add('beardisplacement', 'panda.png').load(function (loader, resources) {
-    beard = new PIXI.Sprite(resources.beardisplacement.texture);
-    bearf = new PIXI.filters.DisplacementFilter(beard, 0);
-    bear.filters = [bearf];
-    bear.addChild(beard)
-
-    window.onmousemove = function(e) {
-      mousex = e.clientX;
-      mousey = e.clientY;
-    };
-  });
+  // var mousex = w/2, mousey = h/2;
+  // PIXI.loader.add('beardisplacement', 'panda.png').load(function (loader, resources) {
+  //   beard = new PIXI.Sprite(resources.beardisplacement.texture);
+  //   bearf = new PIXI.filters.DisplacementFilter(beard, 0);
+  //   bear.filters = [bearf];
+  //   bear.addChild(beard)
+  //
+  //   window.onmousemove = function(e) {
+  //     mousex = e.clientX;
+  //     mousey = e.clientY;
+  //   };
+  // });
 
 
   var f3;
